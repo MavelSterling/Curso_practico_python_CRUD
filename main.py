@@ -8,7 +8,7 @@ clients = []
 
 
 def create_client(client):
-    global clients
+    global clients 
 
     if client not in clients:
         clients.append(client)
