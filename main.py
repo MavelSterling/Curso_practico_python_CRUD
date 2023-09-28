@@ -6,7 +6,7 @@ CLIENT_SCHEMA = ['name', 'company', 'email', 'position']
 CLIENT_TABLE = '.clients.csv'
 clients = []
 
-
+# Crear cliente
 def create_client(client):
     global clients 
 
@@ -27,7 +27,9 @@ def list_clients():
             company=client['company'], 
             email=client['email'], 
             position=client['position']))
-
+        
+        
+# Actualizar cliente
 
 def update_client(client_id, updated_client):
     global clients
@@ -92,7 +94,7 @@ def _save_clients_to_storage():
         os.remove(CLIENT_TABLE)
         os.rename(tmp_table_name, CLIENT_TABLE)
 
-
+# Menu
 def _print_welcome():
     print('WELCOME TO PLATZI VENTAS')
     print('*' * 50)
